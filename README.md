@@ -1,4 +1,4 @@
-# webapp-coash
+# vue-webapp
 
 > A Vue.js project
 
