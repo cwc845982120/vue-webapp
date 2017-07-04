@@ -22,7 +22,10 @@ axios.interceptors.request.use(
     config => {
         //开启loading
         store.state.test.loadingFlag = true;
-        //TODO
+        //post formData形式提交，把传参处理一下。
+        config.transformRequest = function(data) {
+            return querystring.stringify({ json: data })
+        };
         return config;
     },
     err => {
